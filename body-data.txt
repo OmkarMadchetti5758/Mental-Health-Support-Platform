@@ -1,0 +1,89 @@
+// Signup : http://localhost:5000/api/user/signup
+{
+    "userName": "Omkar",
+    "email": "omkar@gmail.com",
+    "password": "omkar@123",
+    "role": "admin",
+    "privacySettings": {
+        "profileVisibility": false,
+        "activityTracking": false
+    }
+}
+
+// Login : http://localhost:5000/api/user/login
+
+// Add Therapist : http://localhost:5000/api/therapist/add-therapist
+{
+    "fullName": "Susan Fiske",
+    "bio": "An American psychologist who served as the Eugene Higgins Professor of Psychology and Public Affairse",
+    "specialization": ["social psychologist", "Anger"],
+    "availability": {
+        "days": ["Mon", "Wed", "Fri"],
+        "hours": "9:00 am - 5:00 pm"
+    },
+    "contact": {
+        "email": "preeti@gmail.com",
+        "phone": 8956162054
+    },
+    "photoUrl": "",
+    "isVerified": false
+}
+
+// Get Therapist : http://localhost:5000/api/therapist/match?specialization=Stress&specialization=Anger
+
+// Update Therapist : http://localhost:5000/api/therapist/update-therapist/67bd8afa98be81da1b312d3e
+{
+    "fullName": "Preeti Kunari",
+    "bio": "An American psychologist who served as the Eugene Higgins Professor of Psychology and Public Affairse",
+    "specialization": ["social psychologist", "Anger", "Depression"],
+    "availability": {
+        "days": ["Mon", "Wed", "Fri"],
+        "hours": "9:00 am - 5:00 pm"
+    },
+    "contact": {
+        "email": "preeti@gmail.com",
+        "phone": 8956165897
+    },
+    "photoUrl": "",
+    "isVerified": true
+}
+
+// Add Resourse : http://localhost:5000/api/resourse/add-resourse?id=67bd7df75400374470c30f22
+{
+    "title": "Stress",
+    "content": "alisdjknc sciun S ;sxnl",
+    "category": "Stress",
+    "tags": "Meditation"
+}
+
+// Get Resourse : http://localhost:5000/api/resourse/get-resourse
+
+// Add SupportGroup : http://localhost:5000/api/groups/create-group
+{
+  "name": "Mental Health Support Group",
+  "description": "A safe space to discuss mental health challenges and share coping strategies.",
+  "maxMembers": 30,
+  "schedule": {
+    "startDate": "2023-12-01T18:00:00Z",
+    "recurrence": "weekly"
+  },
+  "members": ["67bd7df75400374470c30f22"], // Array of user IDs
+  "discussionTopics": [
+    {
+      "title": "Dealing with Anxiety",
+      "createdBy": "67bf32db527422251f4af706" // User ID of the topic creator
+    },
+    {
+      "title": "Dealing with Depression",
+      "createdBy": "67bf32db527422251f4af706" // User ID of the topic creator
+    }
+  ],
+  "userId": "67bf32db527422251f4af706"
+}
+
+// Get SupportGroup : http://localhost:5000/api/groups/view-groups
+
+// Join SupportGroup : http://localhost:5000/api/groups/67bf286920fba9cec1600275/join
+{
+    "userId": "67bf1e97fae4d4691f514231"
+}
